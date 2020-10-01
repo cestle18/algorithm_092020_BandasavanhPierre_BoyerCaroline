@@ -1,4 +1,4 @@
-from algorithm_092020_BandasavanhPierre_BoyerCaroline import FibonacciHeap
+from fibonacci_heap import FibonacciHeap
 
 f_heap = FibonacciHeap()
 f_heap.insert(5)
