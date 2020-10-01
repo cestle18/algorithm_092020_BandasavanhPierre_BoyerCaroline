@@ -64,5 +64,6 @@ class FibonacciHeap(Heap):
         if self.min_node is None or self.min_node.value > new_node.value:
             self.min_node = new_node
 
+    ## On va chercher la valeur minimum
     def find_min(self) -> int:
         return None if self.min_node is None else self.min_node.value
