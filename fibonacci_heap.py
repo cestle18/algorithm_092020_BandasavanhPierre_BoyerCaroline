@@ -90,7 +90,6 @@ class FibonacciHeap(Heap):
                 return min_node.key
 
     def merge(self, fibonnaci_heap: Heap) -> None:
-        """
-        Fusionne deux arbres
-        """
-        pass
+            heap2 = []
+            for value in heap2:
+                self.nodes.append(value)
