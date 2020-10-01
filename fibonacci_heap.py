@@ -66,7 +66,8 @@ class FibonacciHeap(Heap):
     def find_min(self) -> int:
         return None if self.min_node is None else self.min_node.value
 
-    # def consolidate(self):
+    def consolidate(self):
+        pass
     # aux = (a(self.count) + 1) [None]
 
     #    def consolidate(self):
