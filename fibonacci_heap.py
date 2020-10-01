@@ -37,6 +37,7 @@ class Node:
         self.children = []
         self.order = 0
 
+
     # La fonction append permet d'ajouter un nouvel élément à la fin de l'arbre
 def add_at_end(self, t):
     self.children.append(t)
@@ -57,10 +58,7 @@ class FibonacciHeap(Heap):
     
     ## Append est la fonction pour ajouter, on va ajouter un node à self
         self.nodes.append(new_node)
-
-    ## La taille augmente de 1
-        self.size += 1
-    
+   
         if self.min_node is None or self.min_node.value > new_node.value:
             self.min_node = new_node
 
