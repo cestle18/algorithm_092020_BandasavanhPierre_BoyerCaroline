@@ -65,3 +65,29 @@ class FibonacciHeap(Heap):
     ## On va chercher la valeur minimum
     def find_min(self) -> int:
         return None if self.min_node is None else self.min_node.value
+
+    # def consolidate(self):
+    # aux = (a(self.count) + 1) [None]
+
+    #    def consolidate(self):
+    #   aux = (floor_log2(self.count) + 1)*[None]
+
+    def delete_min(self):
+        min_node = self.min_node
+        if min_node is not None:
+            for child in min_node.children:
+                self.nodes.append(child)
+                self.nodes.remove(min_node)
+                if self.nodes == []:
+                    self.min_node = Node
+                else:
+                    self.min_node = self.nodes[0]
+                    self.consolidate()
+                    self.count = self.count - 1
+                return min_node.key
+
+    def merge(self, fibonnaci_heap: Heap) -> None:
+        """
+        Fusionne deux arbres
+        """
+        pass
