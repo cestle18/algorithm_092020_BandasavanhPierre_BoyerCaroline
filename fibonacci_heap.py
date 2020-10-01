@@ -75,6 +75,7 @@ class FibonacciHeap(Heap):
     #    def consolidate(self):
     #   aux = (floor_log2(self.count) + 1)*[None]
 
+    ## On va supprimer la valeur minimum
     def delete_min(self):
         min_node = self.min_node
         if min_node is not None:
@@ -88,7 +89,8 @@ class FibonacciHeap(Heap):
                     self.consolidate()
                     self.count = self.count - 1
                 return min_node.key
-
+                
+    ## C'est l'étape de merge 
     def merge(self, fibonnaci_heap: Heap) -> None:
             heap2 = []
             for value in heap2:
